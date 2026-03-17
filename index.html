@@ -1,0 +1,133 @@
+Привет! Раз мы заговорили о конкретном составе **Xirex Team**, давай сделаем что-то более продвинутое. 
+
+Ниже — обновленный код профессиональной веб-карточки команды. Я добавил стилистику «неонового киберпанка» и сразу прописал твой ростер с ролями.
+
+### HTML + CSS: Визитка Xirex Team
+
+Этот код можно сохранить в файл `index.html` и открыть любым браузером.
+
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xirex Team | Official Roster</title>
+    <style>
+        :root {
+            --primary: #ff3e3e; /* Основной цвет команды (красный неон) */
+            --bg: #0a0a0c;
+            --card-bg: #16161a;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: white;
+            font-family: 'Orbitron', sans-serif; /* Подойдет любой футуристичный шрифт */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .team-container {
+            text-align: center;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 10px;
+            color: var(--primary);
+            text-shadow: 0 0 15px var(--primary);
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .roster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .player-card {
+            background: var(--card-bg);
+            padding: 25px 15px;
+            border-left: 4px solid var(--primary);
+            transition: 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .player-card:hover {
+            transform: scale(1.05);
+            background: #1f1f25;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .nickname {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .role {
+            font-size: 0.8rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .status {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 8px;
+            height: 8px;
+            background: #00ff00;
+            border-radius: 50%;
+            box-shadow: 0 0 5px #00ff00;
+        }
+    </style>
+</head>
+<body>
+
+<div class="team-container">
+    <h1>Xirex Team</h1>
+    
+    <div class="roster-grid">
+        <div class="player-card">
+            <div class="status"></div>
+            <span class="nickname">xitno</span>
+            <span class="role">Entry / IGL</span>
+        </div>
+        <div class="player-card">
+            <div class="status"></div>
+            <span class="nickname">flai1</span>
+            <span class="role">AWP</span>
+        </div>
+        <div class="player-card">
+            <div class="status"></div>
+            <span class="nickname">mef0mu</span>
+            <span class="role">Rifler</span>
+        </div>
+        <div class="player-card">
+            <div class="status"></div>
+            <span class="nickname">blitznon</span>
+            <span class="role">Lurker</span>
+        </div>
+        <div class="player-card">
+            <div class="status"></div>
+            <span class="nickname">kaze</span>
+            <span class="role">Support</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
